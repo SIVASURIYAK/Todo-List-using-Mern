@@ -19,7 +19,7 @@ export default function Todo() {
   const [editTitle, setEditTitle] = useState("");
   const [editDescription, setEditDescription] = useState("");
 
-  const apiURL = "http://localhost:8000";
+  const apiURL = "https://todo-list-backend-xqoq.onrender.com";
 
   useEffect(() => {
     getItems();
