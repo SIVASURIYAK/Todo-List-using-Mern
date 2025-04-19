@@ -1,0 +1,287 @@
+/* General Reset and Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://img.freepik.com/premium-photo/wooden-arrow-sign-growth-wood-table-business-development-success-growing-growth-concept-3d-illustration_20693-606.jpg?semt=ais_hybrid&w=740');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    padding: 30px;
+    overflow-y: auto;
+    margin: 0;
+  }
+  .app-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  
+  /* Header */
+  .header {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #FF6F61; /* Deep Coral Pink */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  /* Form */
+  .todo-form {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .input-field {
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #4DB6AC; /* Teal-blue border */
+    border-radius: 10px;
+    background-color: #fff;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .input-field:focus {
+    border-color: #FF6F61; /* Deep Coral Pink on focus */
+    box-shadow: 0 0 5px rgba(255, 111, 97, 0.7);
+  }
+  
+  .submit-btn {
+    background-color: #FFEB3B; /* Bright Yellow */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #FFCA28; /* Darker yellow on hover */
+    transform: scale(1.05);
+  }
+  
+  .success-message {
+    color: #4caf50;
+    font-weight: bold;
+  }
+  
+  .error-message {
+    color: #f44336;
+    font-weight: bold;
+  }
+  
+  /* Todo List */
+  .todo-list {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 30px;
+  }
+  
+  .todo-items {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .todo-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .todo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .todo-content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;  /* Ensure there's space below the description */
+  }
+  
+  .todo-content h5 {
+    font-size: 22px;
+    color: #FF6F61; /* Bold Coral Pink for Title */
+    font-weight: bold;
+    margin-bottom: 8px; /* Adds space between title and description */
+  }
+  
+  .todo-content p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px; /* Ensures space between description and actions */
+  }
+  
+  .todo-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  /* Button Styles */
+  .todo-actions .btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .edit-btn {
+    background-color: #FF6F61; /* Deep Coral Pink */
+    color: white;
+  }
+  
+  .edit-btn {
+    background-color: #03A9F4; /* Sky Blue */
+    color: white;
+    font-weight: 500;
+  }
+  
+  .edit-btn:hover {
+    background-color: #0288D1; /* Deeper blue */
+    transform: scale(1.05);
+  }
+  
+  
+  .delete-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .delete-btn:hover {
+    background-color: #d32f2f;
+    transform: scale(1.05);
+  }
+  
+  .update-btn {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .update-btn:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+  }
+  
+  .cancel-btn {
+    background-color: #9e9e9e;
+    color: white;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #757575;
+    transform: scale(1.05);
+  }
+  
+  .todo-content h5 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #4a148c; /* Professional violet shade */
+    margin-bottom: 6px;
+    position: relative;
+  }
+  
+  .todo-content h5::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 40%;
+    height: 3px;
+    background: linear-gradient(to right, #7b1fa2, #00bcd4); /* Violet to teal underline */
+    border-radius: 2px;
+  }
+  
+  
+  @keyframes emojiBounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px); /* minimal bounce only if needed */
+    }
+  }
+  
+  
+  .btn:active {
+    transform: scale(0.9);
+  }
+  
+  /* Success and Error Messages */
+  .success-message, .error-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+  }
+  .todo-content span:last-child {
+    font-size: 16px;
+    color: #37474f; /* dark grey for readability */
+    background: #e3f2fd; /* light blue background */
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-style: italic;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .todo-content span:last-child:hover {
+    background: #bbdefb;
+    transform: scale(1.02);
+    box-shadow: 0 0 6px rgba(33, 150, 243, 0.3);
+  }
+  .success-message, .error-message {
+    opacity: 1;
+    transition: opacity 1s ease-out;
+  }
+  
+  .success-message.fade-out, .error-message.fade-out {
+    opacity: 0;
+  }
+  
